@@ -12,11 +12,11 @@ const LANGUAGE_NAMES = {
 };
 
 const LANGUAGE_COLORS = {
-  nl: '#FF6B6B',
-  es: '#4ECDC4',
-  it: '#45B7D1',
-  fr: '#96CEB4',
-  de: '#FFEAA7'
+  nl: '#9C9106',
+  es: '#D10F30',
+  it: '#137D07',
+  fr: '#0F12D1',
+  de: '#D1800F'
 };
 
 const App = () => {
@@ -59,10 +59,10 @@ const App = () => {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50 p-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-5xl font-bold text-gray-800 mb-2">
+          <h1 className="md:text-5xl text-xl font-bold text-gray-800 mb-2">
             🌍 Comprehensible Output Progress
           </h1>
-          <p className="text-xl text-gray-600">Your multilingual learning journey</p>
+          <p className="md:text-xl text-md text-gray-600">Status: 2025-11-01<br/><a href="https://comprehensible-output.vercel.app" className="underline">comprehensible-output.vercel.app</a></p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
@@ -102,7 +102,7 @@ const App = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-gray-500 text-sm">Active Days</p>
-                <p className="text-3xl font-bold text-pink-600">3</p>
+                <p className="text-3xl font-bold text-pink-600">89</p>
               </div>
               <Calendar className="w-12 h-12 text-pink-400" />
             </div>
