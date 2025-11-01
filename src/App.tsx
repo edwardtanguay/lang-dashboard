@@ -2,8 +2,8 @@ import React, { useState, useMemo } from 'react';
 import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { BookOpen, TrendingUp, Calendar, Zap } from 'lucide-react';
 
-const RAW_DATA = [
-  {source_phrase: "the program and the project", target_phrase: "het programma en het project", target_language: "nl"},
+const phrases = [
+  {source_phrase: "the program and the project222", target_phrase: "het programma en het project", target_language: "nl"},
   {source_phrase: "walking", target_phrase: "wandelen", target_language: "nl"},
   {source_phrase: "thirty-one", target_phrase: "treinta y uno", target_language: "es"},
   {source_phrase: "mayor", target_phrase: "sindaco", target_language: "it"},
@@ -41,7 +41,7 @@ const App = () => {
 
   const languageStats = useMemo(() => {
     const stats = {};
-    RAW_DATA.forEach(item => {
+    phrases.forEach(item => {
       if (!stats[item.target_language]) {
         stats[item.target_language] = 0;
       }
@@ -56,11 +56,11 @@ const App = () => {
   }, []);
 
   const filteredData = useMemo(() => {
-    if (selectedLanguage === 'all') return RAW_DATA;
-    return RAW_DATA.filter(item => item.target_language === selectedLanguage);
+    if (selectedLanguage === 'all') return phrases;
+    return phrases.filter(item => item.target_language === selectedLanguage);
   }, [selectedLanguage]);
 
-  const totalPhrases = RAW_DATA.length;
+  const totalPhrases = phrases.length;
 
   const handleLanguageSelect = (lang) => {
     setSelectedLanguage(lang);
