@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { useState, useMemo } from 'react';
+import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { BookOpen, TrendingUp, Calendar, Zap } from 'lucide-react';
 import phrases from './data/phrases.json';
 
