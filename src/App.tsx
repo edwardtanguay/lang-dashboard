@@ -1,23 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { BookOpen, TrendingUp, Calendar, Zap } from 'lucide-react';
-
-const phrases = [
-  {source_phrase: "the program and the project222", target_phrase: "het programma en het project", target_language: "nl"},
-  {source_phrase: "walking", target_phrase: "wandelen", target_language: "nl"},
-  {source_phrase: "thirty-one", target_phrase: "treinta y uno", target_language: "es"},
-  {source_phrase: "mayor", target_phrase: "sindaco", target_language: "it"},
-  {source_phrase: "theocracy", target_phrase: "Theokratie", target_language: "de"},
-  {source_phrase: "the coffee machine", target_phrase: "la machine à café", target_language: "fr"},
-  {source_phrase: "I won't read all of this to you.", target_phrase: "no te leeré todo esto", target_language: "es"},
-  {source_phrase: "with an accent", target_phrase: "con acento", target_language: "es"},
-  {source_phrase: "suddenly", target_phrase: "di colpo", target_language: "it"},
-  {source_phrase: "Friday", target_phrase: "Venerdì", target_language: "it"},
-  {source_phrase: "paper towels", target_phrase: "serviettes en papier", target_language: "fr"},
-  {source_phrase: "so far", target_phrase: "tot nu toe", target_language: "nl"},
-  {source_phrase: "congratulations", target_phrase: "Gefeliciteerd", target_language: "nl"},
-  {source_phrase: "to understand", target_phrase: "begrijpen", target_language: "nl"}
-];
+import phrases from './data/phrases.json';
 
 const LANGUAGE_NAMES = {
   nl: 'Dutch',
